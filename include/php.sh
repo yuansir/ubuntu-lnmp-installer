@@ -1,4 +1,3 @@
-#!/bin/bash
 Install_PHP() {
     echo "####################Installing PHP 7##################"
     cd $base_dir/src
@@ -37,7 +36,7 @@ Install_PHP() {
 zend_extension=opcache.so
 opcache.enable=1
 opcache.enable_cli=1
-opcache.memory_consumption=128
+opcache.memory_consumption=$Memory_limit
 opcache.interned_strings_buffer=8
 opcache.max_accelerated_files=100000
 opcache.max_wasted_percentage=5
@@ -50,6 +49,9 @@ opcache.consistency_checks=0
 ;opcache.optimization_level=0
 EOF
 
+    /bin/cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm
+    chmod +x /etc/init.d/php-fpm
+    update-rc.d php-fpm defaults
 
     cat > $php_install_dir/etc/php-fpm.conf <<EOF
 ;;;;;;;;;;;;;;;;;;;;;
