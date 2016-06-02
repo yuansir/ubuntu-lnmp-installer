@@ -32,7 +32,7 @@ base_dir=$(pwd)
 echo $base_dir
 
 . setting.conf
-#. init.sh
+. init.sh
 
 mkdir -p $www_dir/default $logs_dir
 [ -d /data ] && chmod 755 /data
