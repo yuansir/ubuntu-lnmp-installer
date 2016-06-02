@@ -1,6 +1,6 @@
 # LNMP Installer for Ubuntu
 
-###Includes
+### Includes
 * Jemalloc(4.2.0)
 * PHP(7.07)
 * MySQL(5.6.29)
@@ -11,7 +11,7 @@
 * Beanstalkd
 * Supervisor
 
-###Usage
+### Usage
 * git clone https://github.com/yuansir/ubuntu-lnmp-installer.git
 * cd ubuntu-lnmp-installer
 * ./install.sh
