@@ -25,6 +25,7 @@ Install_Nginx() {
     /bin/cp ${base_dir}/config/proxy.conf $nginx_install_dir/conf/proxy.conf
 
     sed -i "s@/usr/local/nginx@$nginx_install_dir@g" /etc/init.d/nginx
+    chmod +x /etc/init.d/nginx
     sed -i "s@/data/wwwroot/default@$www_dir/default@" $nginx_install_dir/conf/nginx.conf
     sed -i "s@/data/wwwlogs@$logs_dir@g" $nginx_install_dir/conf/nginx.conf
     sed -i "s@^user www www@user $run_user $run_user@" $nginx_install_dir/conf/nginx.conf
