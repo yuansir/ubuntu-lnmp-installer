@@ -41,6 +41,7 @@ EOF
     useradd -M -s /sbin/nologin redis
     chown -R redis:redis $redis_install_dir/var/
     /bin/cp ${base_dir}/init.d/redis.sh /etc/init.d/redis-server
+    chmod +x /etc/init.d/redis-server
     update-rc.d redis-server defaults
     sed -i "s@/usr/local/redis@$redis_install_dir@g" /etc/init.d/redis-server
     [ -z "`grep 'vm.overcommit_memory' /etc/sysctl.conf`" ] && echo 'vm.overcommit_memory = 1' >> /etc/sysctl.conf
