@@ -73,9 +73,9 @@ daemonize = yes
 ;;;;;;;;;;;;;;;;;;;;
 [$run_user]
 ;listen = /dev/shm/php-cgi.sock
-listen = 127.0.0.1
+listen = 127.0.0.1:9000
 listen.backlog = -1
-listen.allowed_clients = 127.0.0.1:9000
+listen.allowed_clients = 127.0.0.1
 listen.owner = $run_user
 listen.group = $run_user
 listen.mode = 0666
