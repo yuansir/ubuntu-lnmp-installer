@@ -12,6 +12,6 @@
 * Supervisor
 
 ### Usage
-* git clone https://github.com/yuansir/ubuntu-lnmp-installer.git
+* git clone 
 * cd ubuntu-lnmp-installer
 * ./install.sh
