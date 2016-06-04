@@ -201,6 +201,8 @@ EOF
     /bin/cp support-files/mysql.server /etc/init.d/mysql
     chmod 755 /etc/init.d/mysql
 
+    update-rc.d mysql defaults
+
     cat > /etc/ld.so.conf.d/mysql.conf<<EOF
     ${mysql_install_dir}/lib
     /usr/local/lib
